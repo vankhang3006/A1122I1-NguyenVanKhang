@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasicForm2</title>    
+</head>
+<style>
+    tml, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+fieldset{
+    background-color: rgba(255, 255, 0, 0.356);
+}
+body {
+    display: table-cell;
+    
+}
+</style>
+<body>
+    <form action="abc" method="post">        
+        <fieldset>            
+                    <h1 style="text-align: left; background-color: lightblue; color:blue;">ĐĂNG KÝ HỌC VIÊN</h1>          
+            <table>
+                <tr>
+                    <td style="text-align: left;color:blue"><label for="yourname">Họ và tên</label></td>
+                    <td><input style="width: 230px;" type="text" id="yourname" name="yourname" ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;color:blue"><label for="birthday">Ngày sinh</label></td>
+                    <td><input type="text" id="birthday" name="birthday"></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;color:blue">Giới tính</td>
+                    <td><input name="gender" value="boy" type="radio"/> Nam<input name="gender" value="girl" type="radio"/>Nữ</td>
+
+                </tr>
+                <tr>
+                    <td style="text-align: left;vertical-align: top;color:blue"><label for="address">Địa chỉ</label></td>
+                    <td><label><textarea id="address" name="address"></textarea></label></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;color:blue"><label for="class">Lớp</label></td>
+                    <td>
+                        <select id="class" name="class">
+                            <option value="">--- Chọn lớp ---</option>
+                            <option value="A1122I1">A1122I1</option>
+                            <option value="G1022C2">G1022C2</option>                        
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;color:blue"><label for="email">Email</label></td>
+                    <td><input style="width: 200px;" type="text" id="email" name="email" ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;color:blue"><label for="phone">Điện thoại</label></td>
+                    <td><input style="width: 200px;" type="text" id="phone" name="phone" ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Đăng ký"><input type="reset" value="Nhập lại"></td>
+                </tr>
+            </table>                                                               
+        </fieldset>            
+    </form>
+</body>
+</html>

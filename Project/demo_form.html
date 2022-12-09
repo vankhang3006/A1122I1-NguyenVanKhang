@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <!--    class: 1 file html có thể chứa nhiều class
+        id: Duy nhất trong 1 file html-->
+<!--    comment: ctrl + / -->
+</head>
+<body>
+<form action="abc" method="GET">
+    <table>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td><input type="text" placeholder="Username" id="username" name="username"></td>
+        </tr>
+        <tr>
+            <td> Password</td>
+            <td> <input type="password" placeholder="password" name="password"><br></td>
+        </tr>
+    </table>
+
+    Giới tính
+    <input type="radio" name="gender"> Nữ
+    <input type="radio" name="gender"> Nam <br>
+
+    <select name="address">
+        <option value="">==== Chọn địa chỉ ====</option>
+        <option value="Đà Nẵng">Đà Nẵng</option>
+        <option value="Hà Nội">Hà Nội</option>
+        <option value="TP HCM">TP HCM</option>
+    </select>
+
+    <input type="submit" value="Đăng Nhập">
+</form>
+</body>
+</html>
