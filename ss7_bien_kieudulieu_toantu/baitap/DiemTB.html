@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm</title>
+</head>
+<body> 
+    <script>
+            inputDiemLy  = prompt("Nhập điểm môn Vật lý: ");
+            let diemLy = parseInt(inputDiemLy);
+            inputDiemHoa = prompt("Nhập điểm môn Hoá học: ");
+            let diemHoa = parseInt(inputDiemHoa);
+            inputDiemSinh = prompt("Nhập điểm môn Sinh học: ");        
+            let diemSinh = parseInt(inputDiemSinh);
+            diemTrungbinh = (diemLy+diemHoa+diemSinh)/3;
+            tongDiem = diemLy + diemHoa +diemSinh;
+            document.write("Trung bình cộng của 3 môn Vật lý, Hoá học và Sinh học là: " + diemTrungbinh + "</br>") ;
+            document.write("Tổng điểm của 3 môn Vật lý, Hoá học và Sinh học là: " + tongDiem)                    
+    </script>
+</body>
+</html>

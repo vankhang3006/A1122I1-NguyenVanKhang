@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<style>
+    td{
+        width: 150px;
+        text-align: center;
+    }
+    button{
+        color:white;
+        background-color: violet;
+    }
+    
+</style>
+<body>
+    <table>
+        <tr>
+            <td><b style="vertical-align:bottom;">Amount</br><input type="text" id="dauvao"></b></td>
+            <td><b style="vertical-align:bottom;">From Currency</b></br>
+                <select name="" id="select1">
+                    <option value="a">VNĐ</option>
+                    <option value="b">USD</option> 
+                </select></td>
+            <td><b style="vertical-align:bottom;">To Currency</b></br>
+                <select name="" id="select2">
+                    <option value="a">VNĐ</option>
+                    <option value="b">USD</option> 
+                </select></td>
+            <td style="vertical-align:bottom;"><p></p><button onclick="doSomething()">Convert</button></td>                        
+        </tr>       
+    </table>
+<script>
+    function doSomething(){
+        let giatrivao = document.getElementById('dauvao').value;
+        let select1 = document.getElementById('select1').value;
+        let select2 = document.getElementById('select2').value;
+        if(select1 == select2){
+            alert(giatrivao);
+        }
+        if(select1 == "a" && select2 == "b"){
+            alert(giatrivao/23605);
+        }
+        if(select1 =="b" && select2 == "a"){
+            alert(giatrivao*23605);
+        }
+    }
+</script>        
+</body>
+</html>

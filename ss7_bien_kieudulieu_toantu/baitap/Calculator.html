@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center">Calculator</h1>
+    <input type="text" id="n1">
+    <input type="text" id="n2"></br>
+    <input type="button" onclick="Add();" name="btAdd" value="Addition(+)">
+    <input type="button" onclick="Sub();" name="btSub" value="Subtraction(-)">
+    <input type="button" onclick="Mul();" name="btMul"  value="Multiplication(X)">
+    <input type="button" onclick="Div();" name="btDiv"   value="Division(/)"></br>
+    <script>
+
+        function Add(){
+            n1 = document.getElementById('n1').value;
+            n2 = document.getElementById('n2').value;
+            result = parseInt(n1)+parseInt(n2);
+            document.write("Result Addition: " + result); 
+        }
+        function Sub(){
+            n1 = document.getElementById('n1').value;
+            n2 = document.getElementById('n2').value;
+            result = parseInt(n1)-parseInt(n2);
+            document.write("Result Subtraction: " + result); 
+        }
+        function Mul(){
+            n1 = document.getElementById('n1').value;
+            n2 = document.getElementById('n2').value;
+            result = parseInt(n1)*parseInt(n2);
+            document.write("Result Multiplication: " + result); 
+        }
+        function Div(){
+            n1 = document.getElementById('n1').value;
+            n2 = document.getElementById('n2').value;
+            result = parseInt(n1)/parseInt(n2);
+            document.write("Result Division: " + result); 
+        }
+    </script>
+</body>
+</html>
