@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Nhập vào một tháng
+            => cho biết tháng đó có bao nhiêu ngày
+         */
+    
+        // let month = parseInt(prompt("Nhập vào tháng: "));
+        let month = +prompt("Nhập vào tháng: ");
+        // alert(typeof month)
+    
+        // if (month == 1 || month == 3 || month == 5 ||
+        //     month == 7 || month == 8 || month == 10 || month == 12) {
+        //     document.write("31 ngày")
+        // } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+        //     document.write("30 ngày")
+        // } else if (month == 2) {
+        //     document.write("29 hoặc 28 ngày")
+        // } else {
+        //     document.write("Nhập sai rồi bạn tôi ơi")
+        // }
+    
+        // switch (month) {
+        //     case 1:
+        //         document.write("31 ngày");
+        //         break
+        //     case 3:
+        //         document.write("31 ngày");
+        //         break
+        //     case 5:
+        //         document.write("31 ngày");
+        //         break
+        //     case 7:
+        //         document.write("31 ngày");
+        //         break
+        //     case 8:
+        //         document.write("31 ngày");
+        //         break
+        //     case 10:
+        //         document.write("31 ngày");
+        //         break
+        //     case 12:
+        //         document.write("31 ngày");
+        // }
+    
+    
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.write("31 ngày");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.write("30 ngày");
+                break;
+            case 2:
+                document.write("29 hoặc 28 ngày")
+                break;
+            default:
+                document.write("Nhập sai rồi bạn tôi ơi")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xếp học lực</title>
+</head>
+<body>
+    <script>
+        inputDiemKT = prompt("Nhập điểm bài kiểm tra: ");
+        diemKT = parseInt(inputDiemKT);
+        inputGiuaky = prompt("Nhập điểm giữa kỳ: ");
+        diemGiuaKy = parseInt(inputGiuaky);
+        inputCuoiky = prompt("Nhập điểm cuối kỳ: ");
+        diemCuoiKy = parseInt(inputCuoiky);
+        diemTB=(diemKT+(diemGiuaKy*2)+(diemCuoiKy*3))/6
+        if (diemTB>=8)
+            document.write(diemTB + " - Đạt loại giỏi");
+        else 
+            if(diemTB>=6.5)
+                document.write(diemTB + " - Đạt loại khá");
+            else
+                if(diemTB>=5)
+                    document.write(diemTB + " - Đạt loại trung bình");
+                else
+                    if(diemTB>=3.5)
+                        document.write(diemTB + " - Đạt loại yếu"); 
+                    else
+                        document.write(diemTB + " - Đạt loại kém"); 
+    </script>
+</body>
+</html>

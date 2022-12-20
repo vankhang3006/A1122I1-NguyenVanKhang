@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    display: table;
+    margin: auto;
+}
+input{
+    text-align: center;
+    color:blue;
+}
+    
+</style>
+<body>
+    <fieldset>
+        <input style="width: 165px; height: 30px;text-align: right;" type="text" id="ketqua"></br>
+        <input style="width: 40px; height: 40px;" type="button" onclick="insertNumber();" id="number" value="1">
+        <input style="width: 40px; height: 40px;" type="button" onclick="insertNumber();" id="number" value="2">
+        <input style="width: 40px; height: 40px;" type="button" onclick="insertNumber();" id="number" value="3">
+        <input style="width: 40px; height: 40px;" type="button" onclick="" name="key" value="+"></br>
+        <input style="width: 40px; height: 40px;" type="button" onclick="insertNumber();" id="number" value="4">
+        <input style="width: 40px; height: 40px;" type="button" onclick="insertNumber();" id="number" value="5">
+        <input style="width: 40px; height: 40px;" type="button" onclick="insertNumber();" id="number" value="6">
+        <input style="width: 40px; height: 40px;" type="button" onclick="" name="key" value="-"></br>
+        <input style="width: 40px; height: 40px;" type="button" onclick="insertNumber();" id="number" value="7">
+        <input style="width: 40px; height: 40px;" type="button" onclick="insertNumber();" id="number" value="8">
+        <input style="width: 40px; height: 40px;" type="button" onclick="insertNumber();" id="number" value="9">
+        <input style="width: 40px; height: 40px;" type="button" onclick="" name="key" value="x"></br>
+        <input style="width: 40px; height: 40px;" type="button" onclick="" name="delete" value="C">
+        <input style="width: 40px; height: 40px;" type="button" onclick="insertNumber();" id="number" value="0">
+        <input style="width: 40px; height: 40px;" type="button" onclick="" name="result" value="=">
+        <input style="width: 40px; height: 40px;" type="button" onclick="" name="key" value="/">
+    </fieldset>
+    <script>
+        
+        function insertNumber(){
+            ketqua=document.getElementById('number').value;
+        }
+    </script>
+</body>
+</html>

@@ -7,13 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <button type="button" onclick="showMessage();">Click Me!</button>
-    <div id="messageDiv"></div>
-    <button type="button" onclick="showMessage2();">Click Me!</button>
-    <button type="button" onclick="showMessage3();">Click Me!</button>
-    <button type="button" onclick="showMessage4();">Click Me!</button>
+
 <script>
-    function showMessage(){
+let number = 5;
+if (number-- < 5) {
+document.write("Java");
+} else if (++number > 11) {
+document.write("Javascript");
+} else {
+document.write("HTML");
+}
+document.writeln(message);
+
+    /*function showMessage(){
         alert('Xin chào!');
     }
     function showMessage2(){
@@ -24,7 +30,7 @@
     }
     function showMessage4(){
         console.log('Xin chào!');
-    }
+    }*/
 </script>    
 </body>
 </html>

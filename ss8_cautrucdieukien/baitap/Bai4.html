@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm giá trị lớn nhất</title>
+</head>
+<body>
+    <script>
+        inputNumber1 = prompt("Nhập số thứ nhất: ");
+        number1 = parseInt(inputNumber1);
+        inputNumber2 = prompt("Nhập số thứ hai: ");
+        number2 = parseInt(inputNumber2);
+        inputNumber3 = prompt("Nhập số thứ ba: ");
+        number3 = parseInt(inputNumber3);
+        max = number1;
+        if (max<number2)
+            max=number2;
+                if(max<number3)         
+                    max=number3;        
+        document.write("Số lớn nhất trong 3 số vừa nhập là: " +max);              
+    </script>
+</body>
+</html>
