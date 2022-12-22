@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính giá tiền điện</title>
+</head>
+<body>
+    <script>
+        inputSodien = prompt("Số điện của tháng này là(đơn vị: kWh): ");
+        soDien=parseInt(inputSodien);
+        tienDien = soDien <= 50? soDien*1.678:
+                soDien <= 100? soDien*1.734:
+                 soDien <= 200? soDien*2.014:
+                  soDien <= 300? soDien*2.536: soDien*2.834
+        document.write("Tiền điện tháng này là "+ tienDien);          
+    </script>
+</body>
+</html>
