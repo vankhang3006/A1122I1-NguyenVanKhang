@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+<body>
+    <script>
+        let truoc=0;
+        let sau=1;
+        let fibo=1;
+        let tong = 1;
+        document.writeln(truoc);
+        document.writeln(sau);        
+        for(let i=1;i<=18;i++){//Vì đã in 2 số rồi nên còn phải in 18 số nữa
+            document.writeln(fibo);
+            tong=tong+fibo;
+            truoc=sau;
+            sau=fibo;
+            fibo = truoc + sau;            
+        }
+        document.write("</br>Tổng của 20 số đầu tiên trong dãy fibonacci là: "+tong);                
+    </script>
+</body>
+</html>

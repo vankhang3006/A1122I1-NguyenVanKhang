@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Xuất ra các số chẵn từ 2~n
+        let n = 10;
+    
+        // for(let i = 2; i <= n; i = i + 2) {
+        //     document.writeln(i)
+        // }
+    
+    
+        // for(let i = 2; i <= n; i++) {
+        //     if (i % 2 == 0) {
+        //         document.writeln(i)
+        //     }
+        // }
+    
+    
+        // for (let i = 2; i <= n; i++) {
+        //     if (i % 2 == 1) {
+        //         continue; // sẽ chạy đến bước lặp
+        //     }
+        //     document.writeln(i)
+        // }
+    
+        // n = 10
+        for (let i = 2; i <= n; i++) {
+            if (i % 2 == 1) {
+                continue; // sẽ chạy đến bước lặp
+            }
+            if (i % 5 == 0) {
+                break; // Thoát khỏi vòng lặp
+            }
+            document.writeln(i) // 2 4 6 8
+        }
+    </script>
+</body>
+</html>

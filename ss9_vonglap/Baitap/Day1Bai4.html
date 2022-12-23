@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    <script>
+        let truoc=0;
+        let sau=1;
+        let fibo=1;;
+        let so=0
+        document.writeln(truoc);
+        document.writeln(sau);        
+        for(let i=1;i<=18;i++){//Vì đã in 2 số rồi nên còn phải in 18 số nữa
+            if(fibo % 5 ==0){
+                so=so+fibo;
+                document.writeln(fibo);
+                break;
+            }
+            document.writeln(fibo);
+            truoc=sau;
+            sau=fibo;
+            fibo = truoc + sau;
+                        
+        }
+        document.write("</br>Số chia hết cho 5 đầu tiên trong 20 số đầu tiên của dãy fibonachi là: "+so);
+    </script>           
+</body>
+</html>

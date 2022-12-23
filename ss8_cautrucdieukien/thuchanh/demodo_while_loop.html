@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Xuất ra màn hình 5 từ Hello
+        // let i = 1; // Thực hiện 1 lần
+        // do {
+        //     document.write("Hello<br/>");
+        //     i++;
+        // } while (i <= 5);
+    
+    
+        // Nhập vào số nguyên dương n (n > 0) và suất kết quả
+        let n
+        do {
+            n = +prompt("Nhập vào số nguyên dương");
+    
+            //Bạn phải nhập vào số dương, xin hãy nhập lại
+            if(n <= 0) {
+                alert("Bạn phải nhập vào số dương, xin hãy nhập lại");
+            }
+        } while (n <= 0);
+    
+        alert("Giá trị của n là: " + n)
+    </script>
+</body>
+</html>

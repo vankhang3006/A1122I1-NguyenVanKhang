@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <script>
+        let truoc=0;
+        let sau=1;
+        let fibo=1;
+        document.writeln(truoc);
+        document.writeln(sau);        
+        for(let i=1;i<=18;i++){//Vì đã in 2 số rồi nên còn phải in 18 số nữa
+            document.writeln(fibo);
+            truoc=sau;
+            sau=fibo;
+            fibo = truoc + sau;            
+        }
+    </script>        
+</body>
+</html>

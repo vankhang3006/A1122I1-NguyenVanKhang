@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+<body>
+    <script>
+        let tong =0;
+        let i=1;
+        let j=0;
+        while(i<=30){
+            j++;
+            if(j%7==0){
+                document.writeln(j);
+                i++;
+                tong=tong+j;
+            }
+        }
+        document.write("</br>Tổng 30 số đầu tiên chia hết cho 7 là: "+tong);
+    </script>
+</body>
+</html>
