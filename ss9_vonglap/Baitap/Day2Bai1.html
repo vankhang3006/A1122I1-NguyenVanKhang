@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <script>
+        let f1=0;
+        let f2=1;
+        let n = +prompt("Nhập vào số chữ số của dãy Fibonacci muốn hiện ra màn hình(n phải lớn hơn 2): ");        
+        document.writeln(f1);
+        document.writeln(f2);
+        for(let i=1;i<=n-2;i++){//Vì đã in 2 số rồi nên còn phải in 18 số nữa
+            fn=f1+f2;
+            document.writeln(fn);
+            f1=f2;
+            f2=fn;                       
+        }
+    </script>
+</body>
+</html>

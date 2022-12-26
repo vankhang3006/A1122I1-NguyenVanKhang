@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let luong = +prompt("Nhập vào lương ban đầu của nhân viên: ");
+        let thue;
+        thue = luong >= 15000000 ? luong*0.2:
+                luong >= 7000000 && luong<15000000 ? luong*0.1:luong*0.05    
+        document.write("Thuế = "+thue );
+        let thucLinh=luong-thue;
+        document.write("</br>Lương thực lĩnh là: "+thucLinh);                
+    </script>
+</body>
+</html>
