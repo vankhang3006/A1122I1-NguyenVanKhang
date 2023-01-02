@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers =[];
+        let n = +prompt("Nhập vào số phần tử muốn nhập: ");
+        for (let i = 0; i < n; i++) {
+        numbers[i] = +prompt("Nhập vào phần tử thứ " + (i+1))
+        }
+        let max = 0 ;
+        let tong = 0 ;
+        for(let j=0;j<n;j++){
+            if(numbers[j]>max){
+                max = numbers[j] ;
+                
+            }else{
+                tong = tong +numbers[j];
+            }                        
+        }
+        let avg = tong/n;
+        document.write("Số lớn nhất của dãy số vừa nhập vào là: "+max);
+        document.write("</br>Giá trị trung bình của dãy số vừa nhập vào là: "+avg);
+    </script>
+</body>
+</html>

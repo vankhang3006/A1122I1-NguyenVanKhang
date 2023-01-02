@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        input[type=text] {
+            width: 300px;
+            font-size: 16px;
+            border: 2px solid #ccc; 
+            border-radius: 4px;
+            padding: 12px 10px 12px 10px;
+        }
+        #submit {
+            border-radius: 2px;
+            padding: 10px 32px;
+            font-size: 16px;
+        }
+        </style>
+</head>
+<body>
+    <h2>Từ Điển Anh - Việt</h2>
+       <form> 
+          <input type="text" id="search" placeholder="Nhập từ cần tìm"/>
+          <input type = "submit" onclick="Search();" value = "Tìm"/>
+       </form>
+       <script>
+        
+        function Search(){
+            let english = ["hello","how","book","computer"];
+            let vietnamese = ["xin chào","thế nào","sách","máy tính"];
+            let words = document.getElementById("search").value; 
+            let index = english.indexOf(words) ;
+            if(index == -1){
+                document.write("Không tìm thấy từ vừa nhập trong từ điển!");
+            }else{
+                let display = vietnamese[index];
+                document.write(display);
+            }            
+        }
+       </script>
+</body>
+</html>
