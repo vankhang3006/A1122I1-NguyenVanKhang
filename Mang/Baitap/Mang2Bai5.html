@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+<body>
+    <script>
+        let a = [];        
+        let b = [];
+        let isEqual;
+        let lengthA = +prompt("Nhập vào số phần tử muốn nhập cho mảng 1: ");
+        for(i=0; i < lengthA; i++){
+            a[i] = prompt("Nhập vào phần tử thứ " + (i+1))
+        }
+        let lengthB = +prompt("Nhập vào số phần tử muốn nhập cho mảng 1: ");
+        for(i=0; i < lengthB; i++){
+            b[i] = prompt("Nhập vào phần tử thứ " + (i+1))
+        }
+        if(a.length !== b.length) {
+        isEqual = false;
+        }
+        else
+        {
+        for (let i = 0; i < a.length; i++) {
+            if(a[i] !== b[i]) {
+                isEqual = false;
+                break;
+            }
+            isEqual = true;
+        }
+        }
+        if(isEqual == true){
+            alert("2 mảng vừa nhập bằng nhau!");
+        }else{
+            alert("2 mảng vừa nhập không bằng nhau!");
+        }
+        
+    </script>
+</body>
+</html>

@@ -8,13 +8,12 @@
 </head>
 <body>
     <script>
-        let numbers =[0,1,2,3,19,10,5,13,3,4];
-        let max = 0 ;
-        for(let i=0;i<10;i++){
-            if(numbers[i]>max)
-            max = numbers[i] ;
-        }
-        document.write("Số lớn nhất của dãy số vừa nhập vào là: "+max);
+        let arr =[ "c", "s", "c", "2", "6", "1" ];
+        let dao =[];
+        for (let i = 0; i < arr.length; i++) {
+            dao[i] = arr[(arr.length)-i-1];
+            document.write(dao[i]);
+        }        
     </script>
 </body>
 </html>
