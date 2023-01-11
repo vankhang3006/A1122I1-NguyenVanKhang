@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function footToMeter(foot){
+            foot = parseFloat(foot);
+            meter = 0.305 * foot;
+            document.getElementById("outputMeter").innerHTML = meter;
+        }
+        function meterToFoot(meter){
+            meter = parseFloat(meter);
+            foot = 3.279 * meter;
+            document.getElementById("outputFoot").innerHTML = foot;
+        }
+    </script>
+    <form>
+        <p>            
+            <input id="inputFoot" type="number" placeholder="Feet"
+            oninput="footToMeter(this.value)"
+            onchange="footToMeter(this.value)">
+            <label>Feet to Meters</label>
+            <span id="outputMeter"></span>
+        </p>
+        <p>            
+            <input id="inputMeter" type="number" placeholder="Meters"
+            oninput="meterToFoot(this.value)"
+            onchange="meterToFoot(this.value)">
+            <label>Meters to Feet</label>
+            <span id="outputFoot"></span>
+        </p>
+    </form>
+</body>
+</html>

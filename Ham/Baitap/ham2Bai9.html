@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra ký tự trong mảng</title>
+</head>
+<body>
+    <script>
+        function inputArray(n){
+            let arr =[];
+            for (let i = 0; i < n; i++) {
+            arr[i] = prompt("Nhập vào phần tử thứ " + (i+1));            
+            }
+            return arr ;
+        }
+        function checkCharacter(arr, char){            
+            if((arr.indexOf(char)) !== -1){
+                let count = 0;
+                for(let i = 0; i < arr.length; i++){
+                    if(arr[i] == char){
+                        count++;
+                    }
+                }
+                return count;
+            }else{
+                return -1;
+            }
+        }
+        let n = +prompt("Nhập vào số phần tử muốn nhập: ");
+        let array = inputArray(n);
+        let c = prompt("Nhập vào ký tự muốn kiểm tra: ");
+        let result = checkCharacter(array, c);
+        document.write(result);
+    </script>
+</body>
+</html>

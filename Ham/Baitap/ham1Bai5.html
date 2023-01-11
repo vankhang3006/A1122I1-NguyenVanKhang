@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>        
+        
+        function toConstellation(star){
+            let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+            let cons = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+            let index = stars.indexOf(star);
+            if(index == -1){
+                document.write(star+" is not exist!");                
+            }else{
+                let display = cons[index];
+                document.write(display);
+            }    
+        }
+        let inputStar = prompt("Nhập vào tên một ngôi sao: ");
+        toConstellation(inputStar);
+    </script>
+</body>
+</html>

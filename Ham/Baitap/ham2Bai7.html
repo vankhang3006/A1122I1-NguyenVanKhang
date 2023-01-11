@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi chỗ 2 số</title>
+</head>
+<body>
+    <script>
+        function swapNumbers(firstNum, secondNum) {
+            let temp = firstNum;
+            firstNum = secondNum;
+            secondNum = temp;
+            return [firstNum, secondNum] ;
+        }
+        let firstNumber = +prompt("Nhập vào số thứ nhất: ");
+        let secondNumber = +prompt("Nhập vào số thứ hai: ");
+        document.write("Số thứ nhất: "+firstNumber+"</br>");
+        document.write("Số thứ hai: "+secondNumber+"</br>");
+        [firstNumber, secondNumber] = swapNumbers(firstNumber, secondNumber);
+        document.write("Số thứ nhất sau khi đổi chỗ: "+firstNumber+"</br>");
+        document.write("Số thứ hai sau khi đổi chỗ: "+secondNumber+"</br>");
+   </script>
+</body>
+</html>

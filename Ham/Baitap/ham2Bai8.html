@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đảo ngược mảng số nguyên</title>
+</head>
+<body>
+    <script>
+        function reverseArray(numbers){
+            let arr =[];
+            let i = numbers.length - 1;
+            for(let j = 0; j < numbers.length; j++){
+                arr[j] = numbers[i];
+                i--;
+            }
+            return arr ;
+        }
+        function inputArray(n){
+            let numbers =[];
+            for (let i = 0; i < n; i++) {
+            numbers[i] = +prompt("Nhập vào phần tử thứ " + (i+1));            
+            }
+            return numbers ;
+        }        
+        let n = +prompt("Nhập vào số phần tử muốn nhập: ");
+        let numbers =inputArray(n);
+        let array = reverseArray(numbers);
+        document.write(array); 
+    </script>
+</body>
+</html>

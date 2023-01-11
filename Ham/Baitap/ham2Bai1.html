@@ -8,13 +8,13 @@
 </head>
 <body>
     <script>
-        // Xuất ra màn hình 5 từ Hello
-        let n = null; // Thực hiện 1 lần
-        while(n%2 == 0 ){ // i++ => i = i + 1
-            n = +prompt("Nhập lại"); // 5 <= 5 => true
-             // thực hiện ở cuối body
+        function squareOf(number){
+            let square = number*number ;
+            return square ;
         }
+        let num = +prompt("Nhập vào một số bất kỳ: ");
+        let square = squareOf(num);
+        document.write("Bình phương của "+num+" là: "+square);
     </script>
-    </body>
 </body>
 </html>

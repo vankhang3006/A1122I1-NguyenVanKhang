@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pi = 3.14;
+        function areaOf(radius){
+            let area = 2*radius*pi ;
+            return area ;
+        }
+        function perimeterOf(radius){
+            let perimeter = radius*radius*pi ;
+            return perimeter ;
+        }
+        let r = +prompt("Nhập vào độ dài bán kính của hình tròn: ");
+        let a = areaOf(r);
+        let p = perimeterOf(r);
+        document.write("area = "+a+"</br>");
+        document.write("perimeter = "+p);
+    </script>
+</body>
+</html>
