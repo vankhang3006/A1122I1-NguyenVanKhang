@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // function Mobile(id,typeMobile,batteryStatus,memoryArea) {
+  //     this.batteryStatus = batteryStatus;
+  //     this.typeMobile = typeMobile;
+  //     this.memoryArea = memoryArea;
+  //     this.message = "";
+  //     this.checkOnOff = function () {
+  //         if (this.batteryStatus > 0) {
+  //             return true;
+  //         } else {
+  //             return false;
+  //         }
+  //     };
+  //     this.turnOn = function () {
+  //         alert("Mobile is On");
+  //     }
+  //     this.turnOff = function () {
+  //         alert("Mobile is Off");
+  //     }
+  //     this.charge = function () {
+  //         alert("Battery Charging" + this.batteryStatus++);
+  //     }
+  //     this.writeMessenger = function (message) {
+  //         return this.message;
+  //     }
+  //     this.getMessage = function () {
+  //         return this.message;
+  //     }
+  //     this.sendMessage = function (message,mobile) {
+  //         mobile.writeMessenger(message);
+  //     }
+  //     this.readMessenger = function () {
+  //         alert("Seen");
+  //     }
+  //     this.afterUseFunction = function () {
+  //         return this.batteryStatus--
+  //     }
+  // }
+  //   // console.log(mobile.checkOnOff())
+  //   // console.log(mobile.turnOn());
+  //   // console.log(mobile.turnOff());
+  //   // console.log(mobile.charge());
+  //   let iphone = new Mobile(1,"iphone",30,100);
+  //   let android = new Mobile(1,"Samsung",70,50);
+  //   iphone.sendMessage("Mess from iphone",android);
+  //   let message = android.getMessage();
+  //   console.log(message);
+class Mobile{
+    constructor(id,type,batteryStatus,memoryArea) {
+
+        this.id = id;
+        this.type = type;
+        this.batteryStatus = batteryStatus;
+        this.memoryArea = "";
+        this.messenger = ""
+    }
+    setMessenger(messenger) {
+        return this.messenger
+    }
+    getMessenger() {
+        return this.messenger
+    }
+    sendMessenger(messenger,mobile) {
+        mobile.setMessenger(messenger);
+        mobile.memoryArea += messenger;
+    }
+}
+let iphone = new Mobile(1,"iphone11",100,50);
+let android = new Mobile(2,"samsung",100,50);
+iphone.sendMessenger("Messenger from iphone",android);
+console.log(android.memoryArea)
+    </script>
+</body>
+</html>

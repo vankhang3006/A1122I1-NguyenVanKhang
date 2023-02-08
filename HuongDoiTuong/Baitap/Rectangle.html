@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script>
+        class Rectangle {
+            constructor(width, height){
+                this.width = width;
+                this.height = height;
+            }
+            setWidth(width){
+                this.width = width;
+            }
+            getWidth(){
+                return this.width;
+            }
+            setHeight(height){
+                this.height = height;
+            }
+            getWidth(){
+                return this.height;
+            }
+            display(){
+                document.write(this.width + " - " + this.height);
+            }
+            //Tính chu vi
+            getPerimeter(){
+                return ((this.width + this.height)*2);
+            }
+            //Tính diện tích
+            getArea(){
+                return (this.width*this.height);
+            }
+        }
+        let width = +prompt("Nhập chiều dài của hình chữ nhật: ");
+        let height = +prompt("Nhập chiều rộng của hình chữ nhật ");
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillRect(0,0,width,height);
+        let rec1 = new Rectangle(width, height);
+        document.write("</br> Perimeter = " + rec1.getPerimeter());
+        document.write("</br> Area = " + rec1.getArea());
+        
+    </script>
+</body>
+</html>
