@@ -13,18 +13,18 @@
             return number ;
         }
         function compareNum(firstNum, secondNum, thirdNum){
-            let max = firstNum;
-            if (max < secondNum)
-            max = secondNum;
-                if(max < thirdNum)         
-                    max = thirdNum;              
-            return max ;
+            let min = firstNum;
+            if (min > secondNum)
+            min = secondNum;
+                if(min > thirdNum)         
+                    min = thirdNum;              
+            return min ;
         }
         let n1 = inputNumber();
         let n2 = inputNumber();
         let n3 = inputNumber();
-        let max = compareNum(n1, n2, n3);
-        document.write("max = "+max);
+        let min = compareNum(n1, n2, n3);
+        document.write("min = " + min);
     </script>
 </body>
 </html>
