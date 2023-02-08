@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-       let Mobile = function (id,typeMobile,batteryStatus,memoryArea) {
+       let Mobile = function (id, typeMobile, batteryStatus, memoryArea) {
         this.batteryStatus = batteryStatus;
         this.typeMobile = typeMobile;
         this.memoryArea = memoryArea;
@@ -33,16 +33,16 @@
             }
             alert("Battery is full 100% !");
         }
-        this.writeMessenger = function (message) {
+        this.writeMessage = function (message) {
             return this.message;
         }
         this.getMessage = function () {
             return this.message;
         }
         this.sendMessage = function (message,mobile) {
-            mobile.writeMessenger(message);
+            mobile.writeMessage(message);
         }
-        this.readMessenger = function () {
+        this.readMessage = function () {
             alert("Seen");
         }
         this.afterUseFunction = function () {
