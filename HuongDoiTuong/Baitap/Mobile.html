@@ -8,53 +8,50 @@
 </head>
 <body>
     <script>
-       function Mobile(id,typeMobile,batteryStatus,memoryArea) {
-      this.batteryStatus = batteryStatus;
-      this.typeMobile = typeMobile;
-      this.memoryArea = memoryArea;
-      this.message = "";
-      this.checkOnOff = function () {
-          if (this.batteryStatus > 0) {
-              return true;
-          } else {
-              return false;
-          }
-      };
-      this.turnOn = function () {
-          alert("Mobile is turning On");
-      }
-      this.turnOff = function () {
-          alert("Mobile is turning Off");
-      }
-      this.charge = function () {
-          alert("Battery Charging" + this.batteryStatus++);
-          for(let i = this.batteryStatus; i <= 100; i++){
-            document.write("battery is " + i + "% </br>");
-          }
-          alert("Battery is full 100% !");
-      }
-      this.writeMessenger = function (message) {
-          return this.message;
-      }
-      this.getMessage = function () {
-          return this.message;
-      }
-      this.sendMessage = function (message,mobile) {
-          mobile.writeMessenger(message);
-      }
-      this.readMessenger = function () {
-          alert("Seen");
-      }
-      this.afterUseFunction = function () {
-          return this.batteryStatus--
-      }
+       let Mobile = function (id,typeMobile,batteryStatus,memoryArea) {
+        this.batteryStatus = batteryStatus;
+        this.typeMobile = typeMobile;
+        this.memoryArea = memoryArea;
+        this.message = "";
+        this.checkOnOff = function () {
+            if (this.batteryStatus > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+        this.turnOn = function () {
+            alert("Mobile is turning On");
+        }
+        this.turnOff = function () {
+            alert("Mobile is turning Off");
+        }
+        this.charge = function () {
+            alert("Battery is Charging!");
+            for(let i = this.batteryStatus; i <= 100; i++){
+                alert("battery is " + i + "%");
+            }
+            alert("Battery is full 100% !");
+        }
+        this.writeMessenger = function (message) {
+            return this.message;
+        }
+        this.getMessage = function () {
+            return this.message;
+        }
+        this.sendMessage = function (message,mobile) {
+            mobile.writeMessenger(message);
+        }
+        this.readMessenger = function () {
+            alert("Seen");
+        }
+        this.afterUseFunction = function () {
+            return this.batteryStatus--
+        }
   }
-    console.log(mobile.checkOnOff())
-    console.log(mobile.turnOn());
-    console.log(mobile.turnOff());
-    
     let iphone = new Mobile(1,"iphone",30,100);
-    let android = new Mobile(1,"Samsung",70,50);
+    iphone.charge();
+    let android = new Mobile(2,"Samsung",70,50);
     iphone.sendMessage("Mess from iphone",android);
     let message = android.getMessage();
     console.log(message);
