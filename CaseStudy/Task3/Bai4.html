@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>MENU ĐỒ UỐNG </h2>
+    <p>1. Cafe</p>
+    <p>2. Cam vắt</p>
+    <p>3. Nước ép cà rốt</p>
+    <p>4. Nước ép cà chua</p>
+    <p>5. Nước lọc</p>
+    <p>6. Nước dừa</p>
+    <p>7. Thoát gọi món!</p>
+    <input type ="button" onclick="chonDoUong();" value="Bắt đầu gọi đồ uống !">
+    <script>
+        
+        let doUong = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+        let giaTien = [15000, 25000, 23000, 20000, 7000, 18000];
+        function chonDoUong(){
+            do{
+                let so = +prompt("Mời nhập số theo menu: ");
+                if(so == 7){
+                    break;
+                }
+                alert(doUong[so-1] + ": " + giaTien[so-1]);
+                let soLuong = +prompt("Mời nhập số lượng đồ uống muốn đặt: ");
+                let thanhTien = soLuong*giaTien[so-1];
+                alert("Tổng số tiền cần phải trả là: " + thanhTien);
+            }while(so <= 6)
+        }
+        
+
+    </script>
+</body>
+</html>
