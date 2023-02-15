@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function displayPrimeNumbers(array) {
+            let count = 0;
+            for (let i = 0; i < a.length; i++) { // DUyệt qua các hàng
+                for (let j = 0; j < a[i].length; j++) {
+                    if (isPrime(a[i][j])) {
+                        document.writeln(a[i][j]+"</br>");
+                    } else {
+                        continue;
+                    }
+                }
+            }
+
+        }
+
+        let a = [
+            [1, 2],
+            [8, 11],
+            [6, 7],
+        ];
+        document.write("Các số nguyên tố trong mảng 2 chiều là: </br>");
+        displayPrimeNumbers(a);
+    </script>
+</body>
+
+</html>

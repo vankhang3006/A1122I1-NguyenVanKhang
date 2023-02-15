@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function taoMaTran(m, n) {
+            let numbers = [];
+            for (let i = 0; i < m; i++) {
+                numbers[i] = [];
+                for (let j = 0; j < n; j++) {
+                    numbers[i][j] = +prompt("Nhập vào phần tử hàng " + (i + 1) + " cột " + (j + 1));
+                }
+            }
+            console.log(numbers);
+            return numbers;
+        }
+        function tongChan(numbers, m, n) {
+            let sumChan = 0;
+            for (let i = 0; i < m; i++) { // DUyệt qua các hàng
+                for (let j = 0; j < n; j++) {
+                    if (numbers[i][j] % 2 == 0) {
+                        sumChan = sumChan + numbers[i][j];
+                    } else {
+                        continue;
+                    }
+                }
+            }
+            return sumChan;
+        }
+        let m = + prompt("Nhập vào số hàng của ma trận: ");
+        let n = + prompt("Nhập vào số cột của ma trận: ");
+        let mt = nhapMaTran(m, n);
+        let tong = tongChan(mt, m, n);
+        document.write("Tổng chẵn của ma trận: " + tong);
+    </script>
+</body>
+
+</html>

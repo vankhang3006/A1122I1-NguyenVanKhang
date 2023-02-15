@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findMax(a) {
+            let max = 0;
+            for (let i = 0; i < a.length; i++) { // DUyệt qua các hàng
+                for (let j = 0; j < a[i].length; j++) {
+                    if (max < a[i][j]) {
+                        max = a[i][j];
+                    } else {
+                        continue;
+                    }
+                }
+
+            }
+            return max;
+        }
+        function findMin(a) {
+            let min = a[0][0];
+            for (let i = 0; i < a.length; i++) { // DUyệt qua các hàng
+                for (let j = 0; j < a[i].length; j++) {
+                    if (min > a[i][j]) {
+                        min = a[i][j];
+                    } else {
+                        continue;
+                    }
+                }
+
+            }
+            return min;
+        }
+        let a = [
+            [0, 2, -1, 24],
+            [8, 11, 9, 4],
+        ];
+        let max = findMax(a);
+        let min = findMin(a);
+        document.write("Max = " + max + "</br>Min = " + min);
+
+    </script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="productsTable">
+        <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Manufacturer</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <br/>
+    <label for="code">Code:</label>
+    <input type="text" id="code"/>
+    <br/>
+    <label for="name">Name:</label>
+    <input type="text" id="name"/>
+    <br/>
+    <label for="manufacturer">Manufacturer:</label>
+    <input type="text" id="manufacturer"/>
+    <br/>
+    <label for="price">Price:</label>
+    <input type="text" id="price"/>
+    <br/>
+    <button onclick="addProduct()">Add Product</button>
+    
+    <script !src="">
+        class Product {
+            constructor(code, name, manufacturer, price) {
+                this.code = code;
+                this.name = name;
+                this.manufacturer = manufacturer;
+                this.price = price;
+            }
+    
+            getCode() {
+                return this.code;
+            }
+    
+            setCode(code) {
+                this.code = code;
+            }
+    
+            getName() {
+                return this.name;
+            }
+    
+            setName(name) {
+                this.name = name;
+            }
+    
+            getManufacturer() {
+                return this.manufacturer;
+            }
+    
+            setManufacturer(manufacturer) {
+                this.manufacturer = manufacturer;
+            }
+    
+            getPrice() {
+                return this.price;
+            }
+    
+            setPrice(price) {
+                this.price = price;
+            }
+    
+            toString() {
+                return `Product: code=${this.code}, name=${this.name}, manufacturer=${this.manufacturer}, price=${this.price}`;
+            }
+        }
+    
+        let products = [];
+    
+        let p1 = new Product(1, 'Sản phẩm 1', 'abc', 1000);
+        products.push(p1)
+    
+        function addProduct() {
+            let code = document.getElementById("code").value;
+            let name = document.getElementById("name").value;
+            let manufacturer = document.getElementById("manufacturer").value;
+            let price = document.getElementById("price").value;
+            let product = new Product(code, name, manufacturer, price);
+            products.push(product);
+            showProducts();
+        }
+    
+        function showProducts() {
+            let table = `<table border="1">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Price</th>
+        </tr>`;
+            for (let product of products) {
+                table += `<tr>
+            <td>${product.getCode()}</td>
+            <td>${product.getName()}</td>
+            <td>${product.getManufacturer()}</td>
+            <td>${product.getPrice()}</td>
+          </tr>`;
+            }
+            table += `</table>`;
+            document.getElementById('productsTable').innerHTML = table;
+        }
+    
+        showProducts();
+    </script>
+</body>
+</html>

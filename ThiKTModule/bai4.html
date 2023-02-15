@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script !src="">
+        class Product {
+          constructor(id, name, brand, price) {
+            this.id = id;
+            this.name = name;
+            this.brand = brand;
+            this.price = price;
+          }
+      
+          getId() {
+            return this.id;
+          }
+      
+          setId(id) {
+            this.id = id;
+          }
+      
+          getName() {
+            return this.name;
+          }
+      
+          setName(name) {
+            this.name = name;
+          }
+      
+          getBrand() {
+            return this.brand;
+          }
+      
+          setBrand(brand) {
+            this.brand = brand;
+          }
+      
+          getPrice() {
+            return this.price;
+          }
+      
+          setPrice(price) {
+            this.price = price;
+          }
+      
+          toString() {
+            return `Id: ${this.id}, Name: ${this.name}, Brand: ${this.brand}, Price: ${this.price}`;
+          }
+        }
+      
+        let p1 = new Product(1, 'Sản phẩm 1', 'abc', 1000);
+        const productList = [];
+        productList.push(p1)
+      
+        function addProduct(id, name, brand, price) {
+          const product = new Product(id, name, brand, price);
+          productList.push(product);
+        }
+        function displayProductList() {
+          let table = `<table border="1">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+          </tr>`;
+          // productList.forEach(product => {
+          //   table += `<tr>
+          //     <td>${product.getId()}</td>
+          //     <td>${product.getName()}</td>
+          //     <td>${product.getBrand()}</td>
+          //     <td>${product.getPrice()}</td>
+          //   </tr>`;
+          // });
+          for(let product of productList) {
+              table += `<tr>
+              <td>${product.getId()}</td>
+              <td>${product.getName()}</td>
+              <td>${product.getBrand()}</td>
+              <td>${product.getPrice()}</td>
+            </tr>`;
+          }
+          table += `</table>`;
+          document.write(table);
+        }
+      
+        displayProductList();
+      </script>
+</body>
+</html>
