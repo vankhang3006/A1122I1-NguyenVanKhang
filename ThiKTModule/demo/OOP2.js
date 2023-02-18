@@ -4,13 +4,13 @@ class Person {
         this.birthday = birthday;
         this.address = address;
     }
-    setName(name){
+    setName(name) {
         this.name = name
     }
-    setBirthday(birthday){
+    setBirthday(birthday) {
         this.birthday = birthday
     }
-    setAddress(address){
+    setAddress(address) {
         this.address = address
     }
     getName() {
@@ -44,8 +44,8 @@ function addPerson() {
     showPerson();
 }
 
-        function showPerson() {
-            let table = `<table border="1">
+function showPerson() {
+    let table = `<table border="1">
                <tr>
                  <th>Name</th>
                  <th>Birthday</th>
@@ -53,31 +53,32 @@ function addPerson() {
                  <th>Edit</th>
                  <th>Delete</th>
                </tr>`;
-            for (let i = 0; i < personList.length; i++) {
-                table += `<tr>
+    for (let i = 0; i < personList.length; i++) {
+        table += `<tr>
                 <td>${personList[i].getName()}</td>
                 <td>${personList[i].getBirthday()}</td>
                 <td>${personList[i].getAddress()}</td>
                 <td><button id="edit" onclick="editPerson(${i})">Edit</button></td>
                 <td><button id="delete" onclick="deletePerson(${i})">Delete</button></td>
               </tr>`;
-            }
-            table += `</table>`;
-            document.getElementById("result").innerHTML = table;
-        }
-
-    function editPerson(index) {
-        let person = personList[index];
-        let name = prompt("Enter new name", person.getName());
-        let birthday = prompt("Enter new birthday", person.getBirthday());
-        let address = prompt("Enter new address", person.getAddress());
-        person.name = name;
-        person.birthday = birthday;
-        person.address = address;
-        showPerson();
     }
+    table += `</table>`;
+    document.getElementById("result").innerHTML = table;
+}
 
-    function deletePerson(index) {
-        personList.splice(index, 1);
-        showPerson();
-    }
+function editPerson(index) {
+    let person = personList[index];
+    let name = prompt("Enter new name", person.getName());
+    let birthday = prompt("Enter new birthday", person.getBirthday());
+    let address = prompt("Enter new address", person.getAddress());
+    person.name = name;
+    person.birthday = birthday;
+    person.address = address;
+    showPerson();
+}
+
+function deletePerson(index) {
+    personList.splice(index, 1);
+    showPerson();
+}
+showPerson();

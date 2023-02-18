@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function kiemTraSoTT(a, b) {
+            let tongUoc1 = 0;
+            let tongUoc2 = 0;
+            for (let i = 0; i < a; i++) {
+                if (a % i == 0) {
+                    tongUoc1 = tongUoc1 + i;
+                }
+            }
+            for (let j = 0; j < b; j++) {
+                if (b % j == 0) {
+                    tongUoc2 = tongUoc2 + j;
+                }
+            }
+            if (tongUoc1 == b && tongUoc2 == a) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let a = +prompt("Nhập số thứ nhất: ");
+        let b = +prompt("Nhập số thứ hai: ");
+        let result = kiemTraSoTT(a, b);
+        document.write(result);
+    </script>
+</body>
+
+</html>
